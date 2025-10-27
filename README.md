@@ -1,5 +1,5 @@
 # data-mining
-A repository for notes and projects for Data Mining 290
+A repository for notes and projects exploring LLM's
 
 hello
 
