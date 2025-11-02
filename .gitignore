@@ -6,7 +6,7 @@ __pycache__/
 *.so
 
 # Virtual environments
-.env/
+.venv/
 env/
 env/
 torch-env/
