@@ -176,7 +176,7 @@ class GPTModel(nn.Module):
         return logits
 
 
-def generate_text_simple(model, idx, max_new_tokens, context_size):
+def generate_text_sample(model, idx, max_new_tokens, context_size):
     # idx is (batch, n_tokens) array of indices in the current context
     for _ in range(max_new_tokens):
         # Crop current context if it exceeds the supported context size
@@ -201,3 +201,13 @@ def generate_text_simple(model, idx, max_new_tokens, context_size):
 
     return idx
 
+
+
+def text_to_token_ids(text, tokenizer):
+    encoded = tokenizer.encode(text, allowed_special={'<|endoftext|>'})
+    encoded_tensor = torch.tensor(encoded).unsqueeze(0) # add batch dimension
+    return encoded_tensor
+
+def token_ids_to_text(token_ids, tokenizer):
+    flat = token_ids.squeeze(0) # remove batch dimension
+    return tokenizer.decode(flat.tolist())
