@@ -36,3 +36,4 @@ notebooks/instruction*
 # Ignore GPT-2 model weights and downloaded files
 gpt2/355M/
 gpt2/124M/
+notebooks/gpt2/*
