@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
-# The course schedule URL
+# The URL needed
 base_url = "https://scarl.sewanee.edu/CS428/schedule.html"
 output_dir = "CS428"
 
