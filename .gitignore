@@ -37,3 +37,7 @@ notebooks/instruction*
 gpt2/355M/
 gpt2/124M/
 notebooks/gpt2/*
+
+/data/classifier/quiz3/classifierquiz.txt
+
+
